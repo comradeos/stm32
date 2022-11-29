@@ -1,0 +1,14 @@
+20:41:29 **** Rebuild of configuration Debug for project HelloCSTM ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HelloCSTM.o" "..\\src\\HelloCSTM.c" 
+gcc -o HelloCSTM.exe "src\\HelloCSTM.o" 
+20:44:09 **** Rebuild of configuration Debug for project HelloC ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o HelloC.exe main.o 
+20:45:52 **** Build of configuration Debug for project HelloC ****
+make all 
+arm-none-eabi-gcc "../main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"main.d" -MT"main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "main.o"
+Error: Cannot find the specified linker script. Check the linker settings in the build configuration.
+make: *** [makefile:85: fail-specified-linker-script-missing] Error 2
+"make all" terminated with exit code 2. Build might be incomplete.

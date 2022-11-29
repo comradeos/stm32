@@ -1,0 +1,7 @@
+20:41:29 **** Rebuild of configuration Debug for project HelloCSTM ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HelloCSTM.o" "..\\src\\HelloCSTM.c" 
+gcc -o HelloCSTM.exe "src\\HelloCSTM.o" 
+
+20:41:30 Build Finished. 0 errors, 0 warnings. (took 393ms)
+
