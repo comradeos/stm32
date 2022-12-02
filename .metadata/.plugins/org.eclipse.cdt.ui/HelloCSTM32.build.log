@@ -1,6 +1,6 @@
-23:23:09 **** Incremental Build of configuration Debug for project HelloCSTM32 ****
+11:29:14 **** Incremental Build of configuration Debug for project HelloCSTM32 ****
 make all 
 make: Nothing to be done for `all'.
 
-23:23:09 Build Finished. 0 errors, 0 warnings. (took 233ms)
+11:29:14 Build Finished. 0 errors, 0 warnings. (took 301ms)
 
