@@ -1,14 +1,21 @@
-20:41:29 **** Rebuild of configuration Debug for project HelloCSTM ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HelloCSTM.o" "..\\src\\HelloCSTM.c" 
-gcc -o HelloCSTM.exe "src\\HelloCSTM.o" 
-20:44:09 **** Rebuild of configuration Debug for project HelloC ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-gcc -o HelloC.exe main.o 
-20:45:52 **** Build of configuration Debug for project HelloC ****
+23:22:28 **** Build of configuration Debug for project HelloCSTM32 ****
 make all 
-arm-none-eabi-gcc "../main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"main.d" -MT"main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "main.o"
-Error: Cannot find the specified linker script. Check the linker settings in the build configuration.
-make: *** [makefile:85: fail-specified-linker-script-missing] Error 2
-"make all" terminated with exit code 2. Build might be incomplete.
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: HelloCSTM32
+Invoking: MacOS X C Linker
+gcc  -o "HelloCSTM32"  ./main.o   
+Finished building target: HelloCSTM32
+ 
+
+23:22:29 Build Finished. 0 errors, 0 warnings. (took 809ms)
+
+23:23:01 **** Incremental Build of configuration Debug for project HelloCSTM32 ****
+make all 
+make: Nothing to be done for `all'.
+23:23:09 **** Incremental Build of configuration Debug for project HelloCSTM32 ****
+make all 
+make: Nothing to be done for `all'.
