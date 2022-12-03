@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_zIsVcXATEe2qCq_CXQgHgg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_zIsVcnATEe2qCq_CXQgHgg" bindingContexts="_zIsVe3ATEe2qCq_CXQgHgg">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; tooltip=&quot;HelloCSTM32/main.c&quot;>&#xA;&lt;persistable path=&quot;/HelloCSTM32/main.c&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; tooltip=&quot;HelloStm33/Core/Src/main.c&quot;>&#xA;&lt;persistable path=&quot;/HelloStm33/Core/Src/main.c&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.st.stm32cube.common.mx.startCubeMx&quot; name=&quot;HelloStm33.ioc&quot; tooltip=&quot;HelloStm33/HelloStm33.ioc&quot;>&#xA;&lt;persistable path=&quot;/HelloStm33/HelloStm33.ioc&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; tooltip=&quot;HelloC/main.c&quot;>&#xA;&lt;persistable path=&quot;/HelloC/main.c&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;HelloCSTM.c&quot; tooltip=&quot;HelloCSTM/src/HelloCSTM.c&quot;>&#xA;&lt;persistable path=&quot;/HelloCSTM/src/HelloCSTM.c&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.st.stm32cube.common.mx.startCubeMx&quot; name=&quot;HelloStm32.ioc&quot; tooltip=&quot;HelloStm32/HelloStm32.ioc&quot;>&#xA;&lt;persistable path=&quot;/HelloStm32/HelloStm32.ioc&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stm32f0xx_hal_msp.c&quot; tooltip=&quot;HelloStm32/Core/Src/stm32f0xx_hal_msp.c&quot;>&#xA;&lt;persistable path=&quot;/HelloStm32/Core/Src/stm32f0xx_hal_msp.c&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stm32f0xx_it.c&quot; tooltip=&quot;HelloStm32/Core/Src/stm32f0xx_it.c&quot;>&#xA;&lt;persistable path=&quot;/HelloStm32/Core/Src/stm32f0xx_it.c&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; tooltip=&quot;HelloStm32/Core/Src/main.c&quot;>&#xA;&lt;persistable path=&quot;/HelloStm32/Core/Src/main.c&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_zIsVcnATEe2qCq_CXQgHgg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_zXdKMnATEe2qCq_CXQgHgg" x="359" y="185" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_zIsVcnATEe2qCq_CXQgHgg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_zXdKMnATEe2qCq_CXQgHgg" x="331" y="162" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -81,7 +81,7 @@
                 <tags>categoryTag:General</tags>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_zevd93ATEe2qCq_CXQgHgg" containerData="7904" selectedElement="_zevd_nATEe2qCq_CXQgHgg">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_zevd93ATEe2qCq_CXQgHgg" containerData="7904" selectedElement="_zevd-HATEe2qCq_CXQgHgg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_zevd-HATEe2qCq_CXQgHgg" containerData="7500" selectedElement="_zevd-XATEe2qCq_CXQgHgg" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_zevd-XATEe2qCq_CXQgHgg" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_zeg0cHATEe2qCq_CXQgHgg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_zevd-nATEe2qCq_CXQgHgg" elementId="topRight" visible="false" containerData="2500" selectedElement="_zevd-3ATEe2qCq_CXQgHgg">
@@ -378,7 +378,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zaJR0HATEe2qCq_CXQgHgg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_OKUbsHG0Ee2uCsBeWnBbtw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_zJNTXHATEe2qCq_CXQgHgg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_QM0lEHJbEe2arYDlGlfQuQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_zJNTXHATEe2qCq_CXQgHgg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zaJR0XATEe2qCq_CXQgHgg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -409,7 +409,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zaJ44HATEe2qCq_CXQgHgg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_OKaiUHG0Ee2uCsBeWnBbtw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_zJNTAXATEe2qCq_CXQgHgg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_QM4PcHJbEe2arYDlGlfQuQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_zJNTAXATEe2qCq_CXQgHgg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zaJ44XATEe2qCq_CXQgHgg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -937,7 +937,7 @@
   <bindingTables xmi:id="_zels8XATEe2qCq_CXQgHgg" bindingContext="_zels8HATEe2qCq_CXQgHgg"/>
   <bindingTables xmi:id="_zels83ATEe2qCq_CXQgHgg" bindingContext="_zels8nATEe2qCq_CXQgHgg"/>
   <bindingTables xmi:id="_N1Ekc3G0Ee2uCsBeWnBbtw" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_zIsVfnATEe2qCq_CXQgHgg">
-    <bindings xmi:id="_N1EkdHG0Ee2uCsBeWnBbtw" keySequence="M1+W" command="_N1EkcXG0Ee2uCsBeWnBbtw"/>
+    <bindings xmi:id="_P4xnsHJbEe2arYDlGlfQuQ" keySequence="M1+W" command="_N1EkcXG0Ee2uCsBeWnBbtw"/>
   </bindingTables>
   <rootContext xmi:id="_zIsVe3ATEe2qCq_CXQgHgg" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_zIsVfHATEe2qCq_CXQgHgg" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Windows" description="A window is open">
