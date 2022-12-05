@@ -5013,3 +5013,29 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/comra
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-02 19:06:27.246
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-12-05 11:21:51.740 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_UA
+Framework arguments:  -keyring /Users/comradeos/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/comradeos/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-12-05 11:22:00.183
+!MESSAGE Log4j initialized with config file /Users/comradeos/Workspace/stm32/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-05 11:22:09.331
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-12-05 12:01:44.176 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_UA
+Framework arguments:  -keyring /Users/comradeos/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/comradeos/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-12-05 12:01:53.741
+!MESSAGE Log4j initialized with config file /Users/comradeos/Workspace/stm32/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-05 12:02:04.290
+!MESSAGE Started RMI Server, listening on port 41337
