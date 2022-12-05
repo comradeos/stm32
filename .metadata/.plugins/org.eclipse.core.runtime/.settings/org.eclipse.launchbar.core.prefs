@@ -1,10 +1,12 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:HelloCSTM32 Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:HelloCSTM32 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Stm32F0Discovery Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HelloC\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HelloCSTM\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HelloCSTM\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HelloStm33\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Stm32F0Discovery\ Debug/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:HelloCSTM32\ Debug/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:HelloCSTM32\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

@@ -1,0 +1,17 @@
+20:16:13 **** Incremental Build of configuration Debug for project Stm32F0Discovery ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F051x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Stm32F0Discovery.elf" @"objects.list"   -mcpu=cortex-m0 -T"/Users/comradeos/Workspace/stm32/Stm32F0Discovery/STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32F0Discovery.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Stm32F0Discovery.elf
+ 
+arm-none-eabi-size   Stm32F0Discovery.elf 
+arm-none-eabi-objdump -h -S  Stm32F0Discovery.elf  > "Stm32F0Discovery.list"
+   text	   data	    bss	    dec	    hex	filename
+   5092	     20	   1572	   6684	   1a1c	Stm32F0Discovery.elf
+Finished building: default.size.stdout
+ 
+Finished building: Stm32F0Discovery.list
+ 
+
+20:16:14 Build Finished. 0 errors, 0 warnings. (took 471ms)
+
