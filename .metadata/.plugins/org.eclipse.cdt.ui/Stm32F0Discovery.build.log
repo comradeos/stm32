@@ -1,10 +1,10 @@
-18:32:28 **** Incremental Build of configuration Debug for project STM32F0Discovery ****
-make -j9 all 
-arm-none-eabi-size   STM32F0Discovery.elf 
+19:56:27 **** Incremental Build of configuration Debug for project Stm32F0Discovery ****
+make -j16 all 
+arm-none-eabi-size   Stm32F0Discovery.elf 
    text	   data	    bss	    dec	    hex	filename
-   4988	     20	   1572	   6580	   19b4	STM32F0Discovery.elf
+   4984	     20	   1572	   6576	   19b0	Stm32F0Discovery.elf
 Finished building: default.size.stdout
  
 
-18:32:28 Build Finished. 0 errors, 0 warnings. (took 352ms)
+19:56:27 Build Finished. 0 errors, 0 warnings. (took 249ms)
 

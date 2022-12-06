@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := STM32F0Discovery
+BUILD_ARTIFACT_NAME := Stm32F0Discovery
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-STM32F0Discovery.elf \
+Stm32F0Discovery.elf \
 
 MAP_FILES += \
-STM32F0Discovery.map \
+Stm32F0Discovery.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-STM32F0Discovery.list \
+Stm32F0Discovery.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: STM32F0Discovery.elf secondary-outputs
+main-build: Stm32F0Discovery.elf secondary-outputs
 
 # Tool invocations
-STM32F0Discovery.elf STM32F0Discovery.map: $(OBJS) $(USER_OBJS) /Users/comradeos/Workspace/stm32/STM32F0Discovery/STM32F051R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32F0Discovery.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"/Users/comradeos/Workspace/stm32/STM32F0Discovery/STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F0Discovery.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Stm32F0Discovery.elf Stm32F0Discovery.map: $(OBJS) $(USER_OBJS) C:\Workspace\stm32\Stm32F0Discovery\STM32F051R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Stm32F0Discovery.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Workspace\stm32\Stm32F0Discovery\STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32F0Discovery.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F0Discovery.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "STM32F0Discovery.list"
+Stm32F0Discovery.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Stm32F0Discovery.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) STM32F0Discovery.elf STM32F0Discovery.list STM32F0Discovery.map default.size.stdout
+	-$(RM) Stm32F0Discovery.elf Stm32F0Discovery.list Stm32F0Discovery.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
