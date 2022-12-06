@@ -6,4 +6,6 @@
 			<item value="com.st.stm32cube.common.projectcreation.ui.category"/>
 		</list>
 	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	</section>
 </section>

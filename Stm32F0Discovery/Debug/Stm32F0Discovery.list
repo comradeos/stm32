@@ -1,5 +1,5 @@
 
-Stm32F0Discovery.elf:     file format elf32-littlearm
+STM32F0Discovery.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
