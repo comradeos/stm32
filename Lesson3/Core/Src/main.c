@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,7 +55,10 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef* huart)
+{
 
+}
 /* USER CODE END 0 */
 
 /**
@@ -89,7 +92,9 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  char message[] = "Hello, World!";
+  uint8_t counter = 0;
+  char message[] = "Free and open-source terminal emulator, serial console and network file transfer application.\nIt supports several network protocols, including SCP, SSH\n";
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,9 +102,18 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
-	 HAL_UART_Transmit(&huart2, (uint8_t * ) message, sizeof(message), 100);
-	 HAL_Delay(500);
+	  counter++;
+	 HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_9);
+	 HAL_Delay(50);
+	 if (counter == 20)
+	 {
+		 HAL_UART_Transmit_IT(&huart2, (uint8_t * ) message, strlen(message));
+		 counter = 0;
+	 }
+
+
   }
   /* USER CODE END 3 */
 }
