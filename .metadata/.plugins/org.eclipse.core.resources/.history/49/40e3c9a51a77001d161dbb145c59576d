@@ -94,12 +94,12 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))
+	  if (!HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))
 	  {
-		  HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);
-		  // HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+//		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);
+		  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
 	  } else {
-		  HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_RESET);
+//		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
 	  }
 
 	/* USER CODE BEGIN 3 */
