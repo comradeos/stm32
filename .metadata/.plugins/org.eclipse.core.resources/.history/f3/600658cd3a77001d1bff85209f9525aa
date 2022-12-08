@@ -93,7 +93,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   uint8_t counter = 0;
-  char message[] = "Getting message...\n";
+  char message[] = "Free and open-source terminal emulator, serial console and network file transfer application.\nIt supports several network protocols, including SCP, SSH\n";
 
   /* USER CODE END 2 */
 
