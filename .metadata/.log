@@ -3360,3 +3360,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/comra
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-08 19:00:12.693
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-08 19:33:49.541
+!MESSAGE Indexed 'Lesson3' (21 sources, 81 headers) in 3.89 sec: 4,110 declarations; 21,585 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0078%)
