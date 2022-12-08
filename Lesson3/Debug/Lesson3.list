@@ -331,6 +331,9 @@ int main(void)
  8000292:	2b14      	cmp	r3, #20
  8000294:	d1eb      	bne.n	800026e <main+0x2e>
 	 {
+		 // вывести сообщение в консоль (ком порт, конектиться через Arduino IDE)
+		 // Arduino IDE -> Select Board -> Select other boards and ports -> [Arduino BT, USBToUART Serial Port] -> OK -> Serial Monitor
+		 //
 		 HAL_UART_Transmit_IT(&huart2, (uint8_t * ) message, strlen(message));
  8000296:	1d3b      	adds	r3, r7, #4
  8000298:	0018      	movs	r0, r3

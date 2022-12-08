@@ -109,9 +109,6 @@ int main(void)
 	 HAL_Delay(50);
 	 if (counter == 20)
 	 {
-		 // вывести сообщение в консоль (ком порт, конектиться через Arduino IDE)
-		 // Arduino IDE -> Select Board -> Select other boards and ports -> [Arduino BT, USBToUART Serial Port] -> OK -> Serial Monitor
-		 //
 		 HAL_UART_Transmit_IT(&huart2, (uint8_t * ) message, strlen(message));
 		 counter = 0;
 	 }
