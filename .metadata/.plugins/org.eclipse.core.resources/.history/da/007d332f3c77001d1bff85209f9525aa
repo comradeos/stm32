@@ -93,7 +93,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   uint8_t counter = 0;
-  char message[] = "Getting message 2...\n";
+  char message[] = "Getting message...\n";
 
   /* USER CODE END 2 */
 
