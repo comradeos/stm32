@@ -295,7 +295,7 @@ int main(void)
  8000258:	18fb      	adds	r3, r7, r3
  800025a:	2200      	movs	r2, #0
  800025c:	701a      	strb	r2, [r3, #0]
-  char message[] = "Getting message 2...\n";
+  char message[] = "Getting message 3...\n";
  800025e:	003b      	movs	r3, r7
  8000260:	4a14      	ldr	r2, [pc, #80]	; (80002b4 <main+0x74>)
  8000262:	ca13      	ldmia	r2!, {r0, r1, r4}
