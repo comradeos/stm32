@@ -21,7 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>//бібліотека вводу виводу
+#include <string.h>//бібліотека для роботи з рядками
+#include <math.h>//бібліотека для роботи з математичними функціями
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,7 +60,42 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+#define PHT_UP_R 10000.0F //опір резистора – нижнього плеча дільника напруги
+#define PHT_10LX_R 250000.0F //опір фоторезистора при 10 лк
+#define PHT_GAMMA 0.6F //коефіцієнт гамма
 
+uint16_t ADC_Raw; //сире оцифроване значення з АЦП
+
+uint32_t Pht_R; //опір фоторезистора
+uint32_t Pht_lux; //шукана освітленість
+
+/*дві допоміжні змінні*/
+float Pht_Div;
+float Pht_Temp;
+
+uint16_t raw_adc_value=0;
+
+char buf[10]; //буфер для даних відправки по UART
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef * hadc)//переривання по закінченню обробки даних АЦП
+{
+    ADC_Raw = HAL_ADC_GetValue(hadc); //зчитуємо значення
+}
+
+uint32_t get_lux(uint16_t raw_adc_value)
+{
+  uint16_t lux_value;
+  //знаходимо опір фоторезистора
+  Pht_R = (PHT_UP_R * ADC_Raw) / (4095 - ADC_Raw);
+
+  //знаходимо значення невідомої освітленості в декілька етапів
+  Pht_Div = PHT_10LX_R/Pht_R;
+
+  Pht_Temp = (log10(Pht_Div) / PHT_GAMMA)+1;
+  lux_value = pow(10, Pht_Temp);
+
+  return lux_value;
+}
 /* USER CODE END 0 */
 
 /**
@@ -92,7 +129,7 @@ int main(void)
   MX_ADC_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_ADC_Start_IT(&hadc); //запускаємо перетворення АЦП
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -102,7 +139,16 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	    /***має спрацювати колбек***/
+
+		  Pht_lux = get_lux(ADC_Raw); //отримуємо готове значення освітленості
+		  sprintf(buf, "%d", (int)Pht_lux); //поміщаємо освітленість у буфер
+		  strcat(buf, " lux\n"); //доформатовуємо буфер аби красиво виводились одиниці виміру та новий рядок
+
+		  //вивід інформації по юарту
+		  HAL_UART_Transmit(&huart2, (uint8_t *)buf, sizeof(buf), 100);
+		  HAL_Delay(500);
+	  }
   /* USER CODE END 3 */
 }
 
@@ -241,10 +287,21 @@ static void MX_USART2_UART_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 
