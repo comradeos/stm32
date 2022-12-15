@@ -7393,3 +7393,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/comra
 
 !ENTRY org.eclipse.cdt.core 1 0 2022-12-15 19:24:10.626
 !MESSAGE Indexed 'Lesson6_MQ7' (19 sources, 81 headers) in 2.23 sec: 4,110 declarations; 21,583 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0078%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-15 20:20:11.699
+!MESSAGE Indexed 'Lesson6_OptoRes' (19 sources, 81 headers) in 1.88 sec: 4,110 declarations; 21,583 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0078%)
