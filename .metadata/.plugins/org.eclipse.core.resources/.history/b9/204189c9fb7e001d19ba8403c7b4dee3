@@ -148,9 +148,7 @@ int main(void)
 		  //вивід інформації по юарту
 		  HAL_UART_Transmit(&huart2, (uint8_t *)buf, sizeof(buf), 100);
 		  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-
-		  if (Pht_lux > 2000)
-		  {
+		  if(Pht_lux > 2000){
 			  HAL_Delay(100);
 		  } else {
 			  HAL_Delay(1000);

@@ -147,14 +147,9 @@ int main(void)
 
 		  //вивід інформації по юарту
 		  HAL_UART_Transmit(&huart2, (uint8_t *)buf, sizeof(buf), 100);
-		  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+		  HAL_Delay(500);
 
-		  if (Pht_lux > 2000)
-		  {
-			  HAL_Delay(100);
-		  } else {
-			  HAL_Delay(1000);
-		  }
+
 
 	  }
   /* USER CODE END 3 */
@@ -303,13 +298,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8|LD3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8|GPIO_PIN_9, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC8 LD3_Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_8|LD3_Pin;
+  /*Configure GPIO pins : PC8 PC9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

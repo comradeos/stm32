@@ -147,14 +147,10 @@ int main(void)
 
 		  //вивід інформації по юарту
 		  HAL_UART_Transmit(&huart2, (uint8_t *)buf, sizeof(buf), 100);
-		  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+		  HAL_Delay(500);
 
-		  if (Pht_lux > 2000)
-		  {
-			  HAL_Delay(100);
-		  } else {
-			  HAL_Delay(1000);
-		  }
+		  HAL_GPIO_TogglePin(LD3_GPIO_Port, GPIO_PIN_7);
+
 
 	  }
   /* USER CODE END 3 */
