@@ -265,13 +265,6 @@ int main(void)
   //задаємо час( секунди, хвилини, години, день тижня, день місяця, місяць, рік)
   set_time(0, 03, 20, 2, 3, 1, 23);
   /* USER CODE END 2 */
-
-    lcd_init(&hi2c1);//ініціалізуємо дисплей на 1-ому i2c
-
-	lcd_send_string("HELLO WORLD",&hi2c1);
-
-	HAL_Delay(1000);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

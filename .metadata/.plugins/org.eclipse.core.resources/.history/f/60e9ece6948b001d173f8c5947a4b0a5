@@ -59,8 +59,6 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-#define LCD_1602_SLAVE_ADRESS (0x27 << 1)//адреса LCD
-
 #define DS1307_SLAVE_ADRESS 0xD0//адреса годинника реального часу
 
 //службова функція для переводу чисел з 10 в 2-у
@@ -124,108 +122,6 @@ void get_time(TIME * t)
   t->years = bin_to_dec(time_block[6]);
 }
 
-
-// функція відправки символів
-void lcd_send_cmd(uint8_t cmd, I2C_HandleTypeDef * i2c_type)
-{
-	uint8_t upper_half_byte;
-	uint8_t lower_half_byte;
-	uint8_t data[4];
-
-	upper_half_byte = cmd & 0xf0; //0xf0 = 11110000
-	lower_half_byte = (cmd << 4) & 0xf0;
-	data[0] = upper_half_byte | 0x0C; //0x0C = 0000 1100, rs = 0, en = 1
-	data[1] = upper_half_byte | 0x08; //0x08 = 0000 1000, rs = 0, en = 0
-	data[2] = lower_half_byte | 0x0C; //0x0C = 0000 1100, rs = 0, en = 1
-	data[3] = lower_half_byte | 0x08; //0x08 = 0000 1000, rs = 0, en = 0
-	HAL_I2C_Master_Transmit(i2c_type, LCD_1602_SLAVE_ADRESS, data, 4, 100);
-}
-
-void lcd_send_data(uint8_t dat, I2C_HandleTypeDef * i2c_type)
-{
-	//dat &= ~0x08; //display off, cursor off
-	uint8_t upper_half_byte;
-	uint8_t lower_half_byte;
-	uint8_t data[4];
-
-	upper_half_byte = dat & 0xf0; //0xf0 = 11110000
-	lower_half_byte = (dat << 4) & 0xf0;
-	data[0] = upper_half_byte | 0x0D; // rs = 1, en = 1
-	data[1] = upper_half_byte | 0x09; // rs = 1, en = 0
-	data[2] = lower_half_byte | 0x0D; // rs = 1, en = 1
-	data[3] = lower_half_byte | 0x09;  //rs = 1, en = 0
-	HAL_I2C_Master_Transmit(i2c_type, LCD_1602_SLAVE_ADRESS, data, 4, 100);
-}
-
-//фунція ініціалізації дисплея на лінії I2C
-void lcd_init(I2C_HandleTypeDef * i2c_type)
-{
-	//4-bit initialisation
-
-	HAL_Delay(50); //wait for more than 40 ms
-	lcd_send_cmd(0x30, i2c_type);
-	HAL_Delay(5);
-	lcd_send_cmd(0x30, i2c_type);
-	HAL_Delay(1); //wait for 100 us
-	lcd_send_cmd(0x30, i2c_type);
-
-	HAL_Delay(1);
-	lcd_send_cmd(0x20, i2c_type);
-	HAL_Delay(1);
-	lcd_send_cmd(0x20, i2c_type);
-	HAL_Delay(1);
-	lcd_send_cmd(0x80, i2c_type); //function set
-	HAL_Delay(1);
-	lcd_send_cmd(0x00, i2c_type); //display off
-	HAL_Delay(1);
-	lcd_send_cmd(0x80, i2c_type); //display clear
-	HAL_Delay(1);
-	lcd_send_cmd(0x00, i2c_type); //display off
-	HAL_Delay(1);
-	lcd_send_cmd(0x10, i2c_type);
-	HAL_Delay(1);
-	lcd_send_cmd(0x00, i2c_type); //display off
-	HAL_Delay(1);
-	lcd_send_cmd(0xC0, i2c_type);
-}
-
-//функція відправки рядка
-void lcd_send_string (char *str, I2C_HandleTypeDef * i2c_type)
-{
-	while (*str) lcd_send_data (*str++, i2c_type);
-}
-
-//очищення дисплея
-void lcd_clear(I2C_HandleTypeDef * i2c_type)
-{
-	lcd_send_cmd (0x80, i2c_type);
-	for (int i=0; i<70; i++)
-	{
-		lcd_send_data (' ', i2c_type);
-	}
-
-}
-
-//функція встановлення курсора
-void lcd_set_cursor(uint8_t row, uint8_t col, I2C_HandleTypeDef * i2c_type)
-{
-	switch (row)
-	{
-	case 0:
-		col |= 0x80;
-		break;
-	case 1:
-		col |= 0xC0;
-		break;
-	}
-	lcd_send_cmd(col, i2c_type);
-}
-
-void lcd_cursor_off(I2C_HandleTypeDef * i2c_type)
-{
-	lcd_send_cmd(0xE, i2c_type);
-}
-
 /* USER CODE END 0 */
 
 /**
@@ -265,13 +161,6 @@ int main(void)
   //задаємо час( секунди, хвилини, години, день тижня, день місяця, місяць, рік)
   set_time(0, 03, 20, 2, 3, 1, 23);
   /* USER CODE END 2 */
-
-    lcd_init(&hi2c1);//ініціалізуємо дисплей на 1-ому i2c
-
-	lcd_send_string("HELLO WORLD",&hi2c1);
-
-	HAL_Delay(1000);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
