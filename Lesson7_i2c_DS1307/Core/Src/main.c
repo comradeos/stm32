@@ -45,7 +45,7 @@ I2C_HandleTypeDef hi2c1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+char buf[21];// буфер для відправки даних
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -83,6 +83,8 @@ typedef struct{
   	uint8_t months;
   	uint8_t years;
 } TIME;
+
+TIME time;// створюємо змінну типу TIME
 
 //Функція для встановлення часу
 void set_time(uint8_t sec, uint8_t min, uint8_t hr, uint8_t dow,
@@ -153,12 +155,11 @@ int main(void)
   MX_I2C1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  TIME time;// створюємо змінну типу TIME
 
-  char buf[21];// буфер для відправки даних
+
 
   //задаємо час( секунди, хвилини, години, день тижня, день місяця, місяць, рік)
-  set_time(0, 42, 19, 1, 21, 12, 22);
+  set_time(0, 03, 20, 2, 3, 1, 23);
   /* USER CODE END 2 */
   /* USER CODE END 2 */
 
@@ -173,7 +174,7 @@ int main(void)
 														 time.daysofmonth,time.months,
 														 time.years);
 	  strcat(buf, "\n");
-	  HAL_UART_Transmit(&huart1, (uint8_t *)buf, sizeof(buf), 1000);
+	  HAL_UART_Transmit(&huart2, (uint8_t *)buf, sizeof(buf), 1000);
 	  HAL_Delay(500);
     /* USER CODE BEGIN 3 */
 

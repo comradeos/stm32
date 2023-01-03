@@ -1,0 +1,10 @@
+../Core/Src/main.c:65:9:dec_to_bin	24	static
+../Core/Src/main.c:71:5:bin_to_dec	16	static
+../Core/Src/main.c:90:6:set_time	48	static
+../Core/Src/main.c:109:6:get_time	48	static
+../Core/Src/main.c:131:5:main	48	static
+../Core/Src/main.c:189:6:SystemClock_Config	104	static
+../Core/Src/main.c:234:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:282:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:317:13:MX_GPIO_Init	56	static
+../Core/Src/main.c:353:6:Error_Handler	8	static,ignoring_inline_asm
