@@ -1,10 +1,10 @@
-20:02:55 **** Incremental Build of configuration Debug for project Lesson7_i2c_DS1307 ****
+20:56:27 **** Incremental Build of configuration Debug for project Lesson7_i2c_DS1307 ****
 make -j9 all 
 arm-none-eabi-size   Lesson7_i2c_DS1307.elf 
    text	   data	    bss	    dec	    hex	filename
-  14764	    120	   1832	  16716	   414c	Lesson7_i2c_DS1307.elf
+  15844	    120	   1832	  17796	   4584	Lesson7_i2c_DS1307.elf
 Finished building: default.size.stdout
  
 
-20:02:56 Build Finished. 0 errors, 0 warnings. (took 394ms)
+20:56:28 Build Finished. 0 errors, 0 warnings. (took 495ms)
 

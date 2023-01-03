@@ -1637,3 +1637,24 @@ arm-none-eabi-size   Lesson7_i2c_DS1307.elf
   14764	    120	   1832	  16716	   414c	Lesson7_i2c_DS1307.elf
 Finished building: default.size.stdout
  
+20:49:20 **** Incremental Build of configuration Debug for project Lesson7_i2c_DS1307 ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F051x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lesson7_i2c_DS1307.elf" @"objects.list"   -mcpu=cortex-m0 -T"/Users/comradeos/Workspace/stm32/Lesson7_i2c_DS1307/STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lesson7_i2c_DS1307.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lesson7_i2c_DS1307.elf
+ 
+arm-none-eabi-size   Lesson7_i2c_DS1307.elf 
+arm-none-eabi-objdump -h -S  Lesson7_i2c_DS1307.elf  > "Lesson7_i2c_DS1307.list"
+   text	   data	    bss	    dec	    hex	filename
+  15844	    120	   1832	  17796	   4584	Lesson7_i2c_DS1307.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lesson7_i2c_DS1307.list
+ 
+20:56:27 **** Incremental Build of configuration Debug for project Lesson7_i2c_DS1307 ****
+make -j9 all 
+arm-none-eabi-size   Lesson7_i2c_DS1307.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15844	    120	   1832	  17796	   4584	Lesson7_i2c_DS1307.elf
+Finished building: default.size.stdout
+ 
