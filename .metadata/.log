@@ -11231,3 +11231,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/comra
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-01-03 19:20:47.998
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-03 19:24:19.205
+!MESSAGE Indexed 'Lesson7_i2c_DS1307' (19 sources, 81 headers) in 4.19 sec: 4,110 declarations; 21,583 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0078%)
