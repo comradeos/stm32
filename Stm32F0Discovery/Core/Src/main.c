@@ -94,15 +94,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))
-	  {
-		  HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);
-		  // HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-	  } else {
-		  HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_RESET);
-	  }
-
-	/* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -153,6 +145,8 @@ void SystemClock_Config(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
@@ -174,6 +168,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
