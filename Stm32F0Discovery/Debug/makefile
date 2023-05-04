@@ -60,8 +60,8 @@ all: main-build
 main-build: Stm32F0Discovery.elf secondary-outputs
 
 # Tool invocations
-Stm32F0Discovery.elf Stm32F0Discovery.map: $(OBJS) $(USER_OBJS) /Users/comradeos/Workspace/stm32/Stm32F0Discovery/STM32F051R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Stm32F0Discovery.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"/Users/comradeos/Workspace/stm32/Stm32F0Discovery/STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32F0Discovery.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Stm32F0Discovery.elf Stm32F0Discovery.map: $(OBJS) $(USER_OBJS) C:\Workspace\stm32\Stm32F0Discovery\STM32F051R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Stm32F0Discovery.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Workspace\stm32\Stm32F0Discovery\STM32F051R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32F0Discovery.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
